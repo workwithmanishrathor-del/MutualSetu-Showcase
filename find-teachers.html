@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>MutualSetu | Find Teachers (Demo)</title>
+
+<meta name="theme-color" content="#2563EB">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+
+<style>
+  * { box-sizing: border-box; }
+
+  body { margin: 0; font-family: 'Inter', sans-serif; background: #F2F5FA; color: #1E293B; }
+  h1, h2, h3 { font-family: 'Poppins', sans-serif; margin: 0; }
+
+  .find-page { max-width: 520px; margin: 0 auto; padding-bottom: 40px; }
+
+  .find-header { padding: 20px 20px 8px; }
+  .back-btn { display: inline-block; text-decoration: none; color: #2563EB; font-weight: 600; font-size: 0.85rem; margin-bottom: 10px; }
+  .find-header h1 { font-size: 1.4rem; }
+  .find-header p { color: #64748B; margin-top: 6px; font-size: 0.9rem; }
+
+  .search-card { background: #fff; margin: 16px 20px; padding: 18px; border-radius: 14px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+  .search-box input { width: 100%; padding: 12px 14px; border-radius: 10px; border: 1px solid #CBD5E1; font-size: 0.9rem; margin-bottom: 14px; }
+
+  .filter-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .form-group { display: flex; flex-direction: column; gap: 6px; }
+  .form-group label { font-size: 0.8rem; font-weight: 600; color: #334155; }
+  .form-group input, .form-group select { padding: 10px 12px; border-radius: 8px; border: 1px solid #CBD5E1; font-size: 0.85rem; font-family: inherit; background: #fff; }
+
+  .search-btn { width: 100%; margin-top: 16px; padding: 13px; background: #2563EB; color: #fff; border: none; border-radius: 10px; font-weight: 600; font-size: 0.9rem; cursor: pointer; }
+
+  .teachers-list { padding: 0 20px; display: flex; flex-direction: column; gap: 12px; }
+
+  .teacher-card { background: #fff; border-radius: 12px; padding: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.04); }
+  .teacher-top { display: flex; align-items: center; gap: 12px; }
+  .teacher-avatar { font-size: 1.8rem; }
+  .teacher-info { flex: 1; }
+  .teacher-info h2 { font-size: 0.95rem; }
+  .teacher-info p { font-size: 0.78rem; color: #64748B; margin: 2px 0 0; }
+  .match-score { font-weight: 700; font-size: 0.85rem; color: #0F6E5C; background: #ECFDF5; padding: 6px 10px; border-radius: 8px; }
+  .teacher-actions { display: flex; gap: 10px; margin-top: 12px; }
+  .view-btn, .interest-btn { flex: 1; text-align: center; padding: 9px; border-radius: 8px; font-size: 0.8rem; font-weight: 600; text-decoration: none; cursor: pointer; border: none; }
+  .view-btn { background: #fff; border: 1px solid #CBD5E1; color: #334155; }
+  .interest-btn { background: #2563EB; color: #fff; }
+
+  @keyframes slideUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+</style>
+
+</head>
+<body>
+
+<div class="find-page">
+
+<header class="find-header">
+  <a href="#" class="back-btn">← Dashboard</a>
+  <h1>Find Teachers</h1>
+  <p>Search teachers for mutual transfer.</p>
+</header>
+
+<section class="search-card">
+
+  <div class="search-box">
+    <input type="text" placeholder="Search by Teacher Name">
+  </div>
+
+  <div class="filter-grid">
+
+    <div class="form-group">
+      <label>State</label>
+      <select><option value="">Select State</option><option>Sample State</option></select>
+    </div>
+
+    <div class="form-group">
+      <label>Current District</label>
+      <input type="text" placeholder="Current District">
+    </div>
+
+    <div class="form-group">
+      <label>Preferred District</label>
+      <input type="text" placeholder="Preferred District">
+    </div>
+
+    <div class="form-group">
+      <label>Subject</label>
+      <select><option value="">Select Subject</option><option>Sample Subject</option></select>
+    </div>
+
+    <div class="form-group">
+      <label>Teacher Type</label>
+      <select><option value="">Select Type</option><option>Sample Type</option></select>
+    </div>
+
+  </div>
+
+  <button class="search-btn">🔍 Search Teachers</button>
+
+</section>
+
+<section class="teachers-list">
+
+  <div class="teacher-card">
+    <div class="teacher-top">
+      <div class="teacher-avatar">👨‍🏫</div>
+      <div class="teacher-info">
+        <h2>Sample Teacher</h2>
+        <p>Sample Post · Sample Subject</p>
+        <p>📍 Sample District → 🎯 Sample District</p>
+      </div>
+      <div class="match-score">—%</div>
+    </div>
+    <div class="teacher-actions">
+      <a href="#" class="view-btn">View Profile</a>
+      <button class="interest-btn">❤️ Send Interest</button>
+    </div>
+  </div>
+
+  <div class="teacher-card">
+    <div class="teacher-top">
+      <div class="teacher-avatar">👩‍🏫</div>
+      <div class="teacher-info">
+        <h2>Sample Teacher</h2>
+        <p>Sample Post · Sample Subject</p>
+        <p>📍 Sample District → 🎯 Sample District</p>
+      </div>
+      <div class="match-score">—%</div>
+    </div>
+    <div class="teacher-actions">
+      <a href="#" class="view-btn">View Profile</a>
+      <button class="interest-btn">❤️ Send Interest</button>
+    </div>
+  </div>
+
+</section>
+
+</div>
+
+<!-- Demo Notice Toast -->
+<div id="demoNotice" style="
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  max-width: 300px;
+  background: #1E293B;
+  color: #F8FAFC;
+  padding: 16px 18px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  z-index: 9999;
+  animation: slideUp 0.4s ease;
+">
+  <button onclick="document.getElementById('demoNotice').style.display='none'" style="
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    background: none;
+    border: none;
+    color: #94A3B8;
+    font-size: 1rem;
+    cursor: pointer;
+  ">✕</button>
+  <strong>🔍 Preview Demo</strong><br>
+  This is an early, simplified version. Buttons aren't functional here — the real MutualSetu app is more complete and polished.
+</div>
+
+<script>
+  // MutualSetu — Dummy Demo Script
+  // No real auth, storage, search, or
+  // matching logic. Sample cards are
+  // static — nothing here is live data.
+  console.log("MutualSetu demo — static preview only.");
+</script>
+
+</body>
+</html>

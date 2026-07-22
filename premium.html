@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>MutualSetu | Premium (Demo)</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+
+<style>
+  * { box-sizing: border-box; }
+
+  body { margin: 0; font-family: 'Inter', sans-serif; background: #F2F5FA; color: #1E293B; }
+  h1, h2, h3 { font-family: 'Poppins', sans-serif; margin: 0; }
+
+  .premium-page { max-width: 480px; margin: 0 auto; padding-bottom: 40px; }
+
+  .premium-header { padding: 20px 20px 10px; }
+  .back-btn { display: inline-block; text-decoration: none; color: #2563EB; font-weight: 600; font-size: 0.85rem; margin-bottom: 10px; }
+  .premium-header h1 { font-size: 1.4rem; }
+  .premium-header p { color: #64748B; margin-top: 6px; font-size: 0.9rem; }
+
+  .hero-card { background: linear-gradient(135deg, #2563EB, #7C3AED); color: #fff; margin: 16px 20px; padding: 26px 22px; border-radius: 16px; text-align: center; }
+  .early-badge { display: inline-block; background: rgba(255,255,255,0.2); padding: 6px 14px; border-radius: 999px; font-size: 0.75rem; font-weight: 600; margin-bottom: 14px; }
+  .hero-card h2 { font-size: 1.2rem; margin-bottom: 10px; }
+  .hero-card p { font-size: 0.85rem; opacity: 0.9; margin-bottom: 18px; }
+  .upgrade-btn { background: #fff; color: #2563EB; border: none; padding: 12px 22px; border-radius: 10px; font-weight: 700; cursor: pointer; }
+
+  .benefits { padding: 8px 20px; }
+  .benefits h2 { font-size: 1.05rem; margin-bottom: 12px; }
+  .benefit-card { background: #fff; padding: 14px 16px; border-radius: 10px; margin-bottom: 10px; font-size: 0.88rem; box-shadow: 0 2px 6px rgba(0,0,0,0.04); }
+
+  .pricing { padding: 8px 20px; }
+  .pricing-card { background: #fff; border-radius: 16px; padding: 24px; text-align: center; position: relative; box-shadow: 0 4px 16px rgba(0,0,0,0.06); margin-bottom: 16px; border: 2px solid #2563EB; }
+  .popular-badge { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: #F59E0B; color: #fff; padding: 4px 12px; border-radius: 999px; font-size: 0.72rem; font-weight: 700; }
+  .pricing-card h2 { font-size: 1rem; margin-bottom: 10px; }
+  .pricing-card h1 { font-size: 2rem; color: #2563EB; margin-bottom: 6px; }
+  .pricing-card h1 span { font-size: 0.85rem; color: #94A3B8; font-weight: 500; }
+  .pricing-card > p { font-size: 0.75rem; color: #94A3B8; margin-bottom: 16px; }
+  .premium-btn { width: 100%; padding: 13px; background: #2563EB; color: #fff; border: none; border-radius: 10px; font-weight: 700; cursor: pointer; }
+
+  .supporter-card { background: #fff; border-radius: 16px; padding: 22px; box-shadow: 0 2px 8px rgba(0,0,0,0.04); }
+  .supporter-card h2 { font-size: 1rem; margin-bottom: 12px; }
+  .supporter-card ul { margin: 0; padding-left: 18px; font-size: 0.85rem; color: #334155; }
+  .supporter-card li { margin-bottom: 8px; }
+
+  .faq-section { padding: 16px 20px 8px; }
+  .faq-section h2 { font-size: 1.05rem; margin-bottom: 12px; }
+  .faq-card { background: #fff; padding: 16px; border-radius: 10px; margin-bottom: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.04); }
+  .faq-card h3 { font-size: 0.88rem; margin-bottom: 6px; }
+  .faq-card p { font-size: 0.8rem; color: #64748B; margin: 0; }
+
+  .trust-box { margin: 16px 20px 0; padding: 20px; background: #fff; border-radius: 12px; text-align: center; box-shadow: 0 2px 6px rgba(0,0,0,0.04); }
+  .trust-box h2 { font-size: 0.95rem; margin-bottom: 8px; }
+  .trust-box p { font-size: 0.82rem; color: #64748B; margin: 6px 0; }
+
+  @keyframes slideUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+</style>
+
+</head>
+<body>
+
+<div class="premium-page">
+
+<header class="premium-header">
+  <a href="#" class="back-btn">← Dashboard</a>
+  <h1>👑 MutualSetu Premium</h1>
+  <p>Sample tagline text goes here.</p>
+</header>
+
+<section class="hero-card">
+  <div class="early-badge">🚀 Sample Offer Badge</div>
+  <h2>Sample Heading</h2>
+  <p>Sample description text goes here.</p>
+  <button class="upgrade-btn">⭐ Sample Button</button>
+</section>
+
+<section class="benefits">
+  <h2>Premium Benefits</h2>
+  <div class="benefit-card">✅ Sample Benefit</div>
+  <div class="benefit-card">🤖 Sample Benefit</div>
+  <div class="benefit-card">👑 Sample Benefit</div>
+  <div class="benefit-card">📈 Sample Benefit</div>
+  <div class="benefit-card">⚡ Sample Benefit</div>
+  <div class="benefit-card">🎯 Sample Benefit</div>
+</section>
+
+<section class="pricing">
+
+  <div class="pricing-card">
+    <div class="popular-badge">🔥 Sample Tag</div>
+    <h2>Premium Membership</h2>
+    <h1>₹—<span>/month*</span></h1>
+    <p>*Sample disclaimer text goes here.</p>
+    <button class="premium-btn">🚀 Sample Button</button>
+  </div>
+
+  <div class="supporter-card">
+    <h2>🎁 Sample Benefits List</h2>
+    <ul>
+      <li>Sample benefit text</li>
+      <li>Sample benefit text</li>
+      <li>Sample benefit text</li>
+      <li>Sample benefit text</li>
+    </ul>
+  </div>
+
+</section>
+
+<section class="faq-section">
+  <h2>❓ Frequently Asked Questions</h2>
+
+  <div class="faq-card">
+    <h3>Sample question?</h3>
+    <p>Sample answer text goes here.</p>
+  </div>
+
+  <div class="faq-card">
+    <h3>Sample question?</h3>
+    <p>Sample answer text goes here.</p>
+  </div>
+
+  <div class="faq-card">
+    <h3>Sample question?</h3>
+    <p>Sample answer text goes here.</p>
+  </div>
+
+</section>
+
+<section class="trust-box">
+  <h2>🔒 Secure & Trusted</h2>
+  <p>Sample trust statement text goes here.</p>
+</section>
+
+</div>
+
+<!-- Demo Notice Toast -->
+<div id="demoNotice" style="
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  max-width: 300px;
+  background: #1E293B;
+  color: #F8FAFC;
+  padding: 16px 18px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  z-index: 9999;
+  animation: slideUp 0.4s ease;
+">
+  <button onclick="document.getElementById('demoNotice').style.display='none'" style="
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    background: none;
+    border: none;
+    color: #94A3B8;
+    font-size: 1rem;
+    cursor: pointer;
+  ">✕</button>
+  <strong>🔍 Preview Demo</strong><br>
+  This is an early, simplified version. Buttons aren't functional here — the real MutualSetu app is more complete and polished.
+</div>
+
+<script>
+  // MutualSetu — Dummy Demo Script
+  // No real auth or premium logic here.
+  console.log("MutualSetu demo — static preview only.");
+</script>
+
+</body>
+</html>

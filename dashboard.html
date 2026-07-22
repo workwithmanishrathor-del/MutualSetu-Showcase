@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>MutualSetu | Dashboard (Demo)</title>
+
+<meta name="theme-color" content="#2563EB">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+
+<style>
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: #F2F5FA;
+    color: #1E293B;
+  }
+
+  h1, h2, h3 { font-family: 'Poppins', sans-serif; margin: 0; }
+
+  .dashboard-page { max-width: 480px; margin: 0 auto; padding-bottom: 40px; }
+
+  .dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px 24px;
+  }
+  .dashboard-header p { color: #64748B; margin-top: 6px; }
+  .settings-btn {
+    text-decoration: none;
+    font-size: 1.3rem;
+  }
+
+  .profile-card {
+    background: #fff;
+    margin: 0 16px 16px;
+    padding: 20px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  }
+  .profile-left { display: flex; gap: 14px; align-items: center; }
+  .profile-avatar { font-size: 2rem; }
+  .profile-left p { margin: 2px 0; color: #64748B; font-size: 0.85rem; }
+  .edit-profile { color: #2563EB; text-decoration: none; font-weight: 600; font-size: 0.9rem; }
+
+  .stats-grid {
+    display: flex;
+    gap: 12px;
+    padding: 0 16px 16px;
+  }
+  .stat-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 18px;
+    flex: 1;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  }
+  .stat-card h2 { color: #2563EB; font-size: 1.6rem; }
+  .stat-card p { color: #64748B; font-size: 0.8rem; margin-top: 4px; }
+
+  .dashboard-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    padding: 0 16px 16px;
+  }
+  .dashboard-item {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    position: relative;
+  }
+  .dashboard-item .icon { font-size: 1.6rem; margin-bottom: 8px; }
+  .dashboard-item h3 { font-size: 0.9rem; }
+  .dashboard-item.premium { background: #FEF3C7; }
+  .notification-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #DC2626;
+    color: #fff;
+    font-size: 0.7rem;
+    padding: 2px 6px;
+    border-radius: 999px;
+  }
+
+  .quick-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0 16px 16px;
+  }
+  .primary-btn {
+    background: #2563EB;
+    color: #fff;
+    border: none;
+    padding: 14px;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .secondary-btn {
+    background: #fff;
+    border: 1px solid #CBD5E1;
+    color: #334155;
+    padding: 14px;
+    border-radius: 10px;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  .dashboard-footer { padding: 16px; text-align: center; }
+  .logout-btn { color: #DC2626; text-decoration: none; font-weight: 600; }
+</style>
+
+</head>
+<body>
+
+<!-- Demo Notice Toast -->
+<div id="demoNotice" style="
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  max-width: 300px;
+  background: #1E293B;
+  color: #F8FAFC;
+  padding: 16px 18px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  z-index: 9999;
+  animation: slideUp 0.4s ease;
+">
+  <button onclick="document.getElementById('demoNotice').style.display='none'" style="
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    background: none;
+    border: none;
+    color: #94A3B8;
+    font-size: 1rem;
+    cursor: pointer;
+  ">✕</button>
+  <strong>🔍 Preview Demo</strong><br>
+  This is an early, simplified version. Buttons aren't functional here — the real MutualSetu app is more complete and polished.
+</div>
+
+<style>
+  @keyframes slideUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+</style>
+
+<div class="dashboard-page">
+
+<header class="dashboard-header">
+  <div>
+    <h1>Welcome, <span id="userName">Demo Teacher</span> 👋</h1>
+    <p>Ready to find your perfect transfer match?</p>
+  </div>
+  <a href="#" class="settings-btn">⚙️</a>
+</header>
+
+<div class="profile-card">
+  <div class="profile-left">
+    <div class="profile-avatar">👨‍🏫</div>
+    <div>
+      <h2 id="profileName">Demo Teacher</h2>
+      <p id="profilePost">Sample Post · Sample Subject</p>
+      <p id="profileLocation">Sample District</p>
+    </div>
+  </div>
+  <a href="#" class="edit-profile">Edit Profile</a>
+</div>
+
+<div class="stats-grid">
+  <div class="stat-card"><h2 id="matchesCount">0</h2><p>Matches</p></div>
+  <div class="stat-card"><h2 id="requestsCount">0</h2><p>Requests</p></div>
+  <div class="stat-card"><h2 id="alertsCount">0</h2><p>Alerts</p></div>
+</div>
+
+<div class="dashboard-grid">
+  <a href="#" class="dashboard-item"><div class="icon">👤</div><h3>My Profile</h3></a>
+  <a href="#" class="dashboard-item"><div class="icon">❤️</div><h3>My Matches</h3></a>
+  <a href="#" class="dashboard-item"><div class="icon">🔍</div><h3>Find Teachers</h3></a>
+  <a href="#" class="dashboard-item notification-item">
+    <div class="icon">🔔</div><h3>Notifications</h3>
+    <span class="notification-badge">0</span>
+  </a>
+  <a href="#" class="dashboard-item"><div class="icon">⚙️</div><h3>Settings</h3></a>
+  <a href="#" class="dashboard-item premium"><div class="icon">⭐</div><h3>Premium</h3></a>
+</div>
+
+<div class="quick-actions">
+  <button class="primary-btn">Update Transfer Preference</button>
+  <a href="#" class="secondary-btn">Find New Teachers</a>
+</div>
+
+<div class="dashboard-footer">
+  <a href="#" class="logout-btn">🚪 Logout</a>
+</div>
+
+</div>
+
+<script>
+  // MutualSetu — Dummy Demo Script
+  // No real auth, no real data, no real matching logic.
+  console.log("MutualSetu demo — static preview only.");
+</script>
+
+</body>
+</html>

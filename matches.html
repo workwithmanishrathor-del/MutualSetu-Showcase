@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>MutualSetu | Teacher Login (Demo)</title>
+
+<meta name="theme-color" content="#2563EB">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+
+<style>
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #3B4FE0 0%, #6D5BD0 100%);
+    position: relative;
+    overflow: hidden;
+    padding: 24px;
+  }
+
+  .background-blur {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(60px);
+    opacity: 0.35;
+    z-index: 0;
+  }
+  .blur-one { width: 260px; height: 260px; background: #A78BFA; top: -60px; left: -60px; }
+  .blur-two { width: 300px; height: 300px; background: #60A5FA; bottom: -80px; right: -60px; }
+
+  .login-card {
+    position: relative;
+    z-index: 1;
+    background: rgba(255,255,255,0.97);
+    border-radius: 20px;
+    padding: 36px 30px;
+    max-width: 380px;
+    width: 100%;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+  }
+
+  .logo-section { text-align: center; margin-bottom: 24px; }
+  .logo-placeholder {
+    width: 48px; height: 48px;
+    margin: 0 auto 10px;
+    border-radius: 12px;
+    background: #E0E7FF;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.3rem;
+  }
+  .logo-section h1 { font-family: 'Poppins', sans-serif; font-size: 1.4rem; margin: 0 0 6px; color: #1E293B; }
+  .logo-section p { margin: 0; color: #334155; font-weight: 600; }
+  .logo-section span { display: block; margin-top: 4px; color: #64748B; font-size: 0.85rem; }
+
+  .input-group { margin-bottom: 18px; }
+  .input-group label { display: block; font-size: 0.85rem; font-weight: 600; color: #334155; margin-bottom: 6px; }
+  .input-group input { width: 100%; padding: 12px 14px; border-radius: 10px; border: 1px solid #CBD5E1; font-size: 0.95rem; }
+
+  .password-box { position: relative; }
+  .password-box input { padding-right: 40px; }
+  .eye-btn { position: absolute; right: 8px; top: 50%; transform: translateY(-50%); background: none; border: none; cursor: pointer; font-size: 1rem; }
+
+  .login-options { display: flex; justify-content: space-between; align-items: center; font-size: 0.82rem; margin-bottom: 20px; }
+  .remember { display: flex; align-items: center; gap: 6px; color: #475569; }
+  .login-options a { color: #2563EB; text-decoration: none; }
+
+  .login-btn { width: 100%; padding: 13px; background: #2563EB; color: #fff; border: none; border-radius: 10px; font-weight: 600; font-size: 0.95rem; cursor: pointer; margin-bottom: 10px; }
+  .google-btn { width: 100%; padding: 13px; background: #fff; border: 1px solid #CBD5E1; border-radius: 10px; font-weight: 600; font-size: 0.9rem; cursor: pointer; }
+
+  .bottom-links { text-align: center; margin-top: 18px; font-size: 0.85rem; color: #475569; }
+  .bottom-links a { color: #2563EB; text-decoration: none; font-weight: 600; }
+  .home-link { display: block; margin-top: 10px; color: #94A3B8 !important; font-weight: 400 !important; }
+</style>
+
+</head>
+<body>
+
+<div class="background-blur blur-one"></div>
+<div class="background-blur blur-two"></div>
+
+<div class="login-card">
+
+    <div class="logo-section">
+        <div class="logo-placeholder">🔷</div>
+        <h1>MutualSetu</h1>
+        <p>Welcome Back 👋</p>
+        <span>Sign in to continue your mutual transfer journey.</span>
+    </div>
+
+    <form id="loginForm" onsubmit="return false;">
+
+        <div class="input-group">
+            <label>Email Address</label>
+            <input type="email" placeholder="Enter your email">
+        </div>
+
+        <div class="input-group">
+            <label>Password</label>
+            <div class="password-box">
+                <input type="password" placeholder="Enter your password">
+                <button type="button" class="eye-btn">👁️</button>
+            </div>
+        </div>
+
+        <div class="login-options">
+            <label class="remember">
+                <input type="checkbox">
+                Remember Me
+            </label>
+            <a href="#">Forgot Password?</a>
+        </div>
+
+        <button type="submit" class="login-btn">Login</button>
+        <button type="button" class="google-btn">Continue with Google</button>
+
+    </form>
+
+    <div class="bottom-links">
+        <p>Don't have an account? <a href="#">Sign Up</a></p>
+        <a href="#" class="home-link">← Back to Home</a>
+    </div>
+
+</div>
+
+<script>
+  // MutualSetu — Dummy Demo Script
+  // No real authentication logic here.
+  console.log("MutualSetu demo — static preview only.");
+</script>
+
+</body>
+</html>
